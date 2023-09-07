@@ -19,9 +19,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rbxts/signal@workspace:.":
+"@rbxts/signal-plus@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@rbxts/signal@workspace:."
+  resolution: "@rbxts/signal-plus@workspace:."
   dependencies:
     "@rbxts/compiler-types": ^2.1.1-types.0
     "@rbxts/services": ^1.5.1
