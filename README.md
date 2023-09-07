@@ -175,5 +175,5 @@ function callback() {
 
 TableSignal.FireUntil(callback, "NewEntry", 1);
 
-TableSignal: Destroy();
+TableSignal.Destroy();
 ```
