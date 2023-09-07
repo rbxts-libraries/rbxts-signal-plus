@@ -1,0 +1,18 @@
+{
+	"name": "rbxts-signal-plus",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Signal": {
+				"$className": "Folder",
+				"$path": "out",
+				"Packages": {
+					"$className": "Configuration",
+					"$path": "Packages"
+				}
+			}
+		}
+	}
+}

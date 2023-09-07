@@ -1,0 +1,52 @@
+{
+	"name": "@rbxts/signal-plus",
+	"version": "1.0.0-beta.0",
+	"description": "A port of RobloxianDemo's Signal class.",
+	"main": "src/Signal/init.luau",
+	"types": "src/Signal/index.d.ts",
+	"files": [
+		"src/Signal",
+		"Packages"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1."
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rbxts-libraries/rbxts-signal-plus.git"
+	},
+	"keywords": [
+		"signal",
+		"scheduler",
+		"remote",
+		"roblox",
+		"roblox-typescript",
+		"roblox-ts"
+	],
+	"author": {
+		"name": "RobloxianDemo",
+		"url": "https://github.com/RobloxianDemo"
+	},
+	"contributors": [
+		{
+			"name": "RobloxianDemo",
+			"url": "https://github.com/RobloxianDemo"
+		}
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rbxts-libraries/rbxts-signal-plus/issues"
+	},
+	"homepage": "https://github.com/rbxts-libraries/rbxts-signal-plus/README.md",
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "^2.1.1-types.0",
+		"@rbxts/types": "^1.0.712"
+	},
+	"packageManager": "yarn@3.6.3",
+	"dependencies": {
+		"@rbxts/services": "^1.5.1"
+	}
+}
