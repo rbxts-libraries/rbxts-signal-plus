@@ -1,6 +1,6 @@
-# Signal
+# Signal Plus
 
-Signal is a fairly personalized, all-in-one, and lightweight implementation served for communication between scripts across the same environment (client -> client and server -> server).
+Signal (plus) is a fairly personalized, all-in-one, and lightweight implementation served for communication between scripts across the same environment (client -> client and server -> server).
 
 ## Installation
 
