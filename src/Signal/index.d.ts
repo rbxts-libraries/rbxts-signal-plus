@@ -424,7 +424,7 @@ interface SignalConstructor {
 
 		@return table -- Return the cleanser class's metatable.
 
-		Index a new Siugnal object.
+		Index a new Signal object.
 
 		### Luau:
 		```lua
