@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/signal-plus",
-	"version": "1.0.0-beta.3",
+	"version": "1.0.0-beta.4",
 	"description": "A port of RobloxianDemo's Signal class.",
 	"main": "src/Signal/init.luau",
 	"types": "src/Signal/index.d.ts",
