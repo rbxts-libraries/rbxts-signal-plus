@@ -34,7 +34,7 @@ type Signal = {
 
 		@method Connect
 
-		@param Callback -- The callback to hook to.
+		@param Callback Callback -- The callback to hook to.
 
 		@return table -- Return a table consisting of disconnect-related functions.
 
@@ -44,7 +44,7 @@ type Signal = {
 		```lua
 			--// Functions
 			--// Placeholder code.
-			local function callback(currentString: string, ...: any?): any?
+			local function Callback(currentString: string, ...: any?): any?
 				if (((type(currentString)) == ("string")) and ((currentString) == ("NewEntry"))) then
 					table.insert(Table, ...)
 
@@ -52,7 +52,7 @@ type Signal = {
 				end
 			end
 
-			TableSignal:Connect(callback)
+			TableSignal:Connect(Callback)
 		```
 
 		### TypeScript:
@@ -63,7 +63,7 @@ type Signal = {
 
 			const TableSignal = new Signal("TableSignal");
 
-			function callback(currentString: string, ...args: any[]): any | undefined {
+			function Callback(currentString: string, ...args: any[]): any | undefined {
 				if (typeIs(currentString, "string") && currentString === "NewEntry") {
 					for (const arg of args) {
 						Table.push(arg);
@@ -73,7 +73,7 @@ type Signal = {
 				}
 			}
 
-			TableSignal.Connect(callback);
+			TableSignal.Connect(Callback);
 		```
 	 */
 	Connect(Callback: Callback): (Callback: Callback) => Signal.Connection;
@@ -83,7 +83,7 @@ type Signal = {
 
 		@method ConnectOnce
 
-		@param Callback -- The callback to hook to.
+		@param Callback Callback -- The callback to hook to.
 
 		@return table -- Return a table consisting of disconnect-related functions.
 
@@ -93,7 +93,7 @@ type Signal = {
 		```lua
 			--// Functions
 			--// Placeholder code.
-			local function callback(currentString: string, ...: any?): any?
+			local function Callback(currentString: string, ...: any?): any?
 				if (((type(currentString)) == ("string")) and ((currentString) == ("NewEntry"))) then
 					table.insert(Table, ...)
 
@@ -101,7 +101,7 @@ type Signal = {
 				end
 			end
 
-			TableSignal:ConnectOnce(callback)
+			TableSignal:ConnectOnce(Callback)
 		```
 
 		### TypeScript:
@@ -112,7 +112,7 @@ type Signal = {
 
 			const TableSignal = new Signal("TableSignal");
 
-			function callback(currentString: string, ...args: any[]): any | undefined {
+			function Callback(currentString: string, ...args: any[]): any | undefined {
 				if (typeIs(currentString, "string") && currentString === "NewEntry") {
 					for (const arg of args) {
 						Table.push(arg);
@@ -122,7 +122,7 @@ type Signal = {
 				}
 			}
 
-			TableSignal.ConnectOnce(callback);
+			TableSignal.ConnectOnce(Callback);
 		```
 	 */
 	ConnectOnce(Callback: Callback): (Callback: Callback) => Signal.Connection;
@@ -132,7 +132,7 @@ type Signal = {
 
 		@method ConnectParallel
 
-		@param callback -- The callback to hook to.
+		@param Callback Callback -- The callback to hook to.
 
 		@return table -- Return a table consisting of disconnect-related functions.
 
@@ -142,7 +142,7 @@ type Signal = {
 		```lua
 			--// Functions
 			--// Placeholder code.
-			local function callback(currentString: string, ...: any?): any?
+			local function Callback(currentString: string, ...: any?): any?
 				if (((type(currentString)) == ("string")) and ((currentString) == ("NewEntry"))) then
 					table.insert(Table, ...)
 
@@ -150,7 +150,7 @@ type Signal = {
 				end
 			end
 
-			TableSignal:ConnectParallel(callback)
+			TableSignal:ConnectParallel(Callback)
 		```
 
 		### TypeScript:
@@ -161,7 +161,7 @@ type Signal = {
 
 			const TableSignal = new Signal("TableSignal");
 
-			function callback(currentString: string, ...args: any[]): any | undefined {
+			function Callback(currentString: string, ...args: any[]): any | undefined {
 				if (typeIs(currentString, "string") && currentString === "NewEntry") {
 					for (const arg of args) {
 						Table.push(arg);
@@ -171,7 +171,7 @@ type Signal = {
 				}
 			}
 
-			TableSignal.ConnectParallel(callback);
+			TableSignal.ConnectParallel(Callback);
 		```
 	 */
 	ConnectParallel(Callback: Callback): (Callback: Callback) => Signal.Connection;
@@ -181,7 +181,7 @@ type Signal = {
 
 		@method ConnectToOnClose
 
-		@param callback -- The callback to hook to.
+		@param Callback Callback -- The callback to hook to.
 
 		@return table -- Return a table consisting of disconnect-related functions.
 
@@ -191,7 +191,7 @@ type Signal = {
 		```lua
 			--// Functions
 			--// Placeholder code.
-			local function callback(currentString: string, ...: any?): any?
+			local function Callback(currentString: string, ...: any?): any?
 				if (((type(currentString)) == ("string")) and ((currentString) == ("NewEntry"))) then
 					table.insert(Table, ...)
 
@@ -199,7 +199,7 @@ type Signal = {
 				end
 			end
 
-			TableSignal:ConnectToOnClose(callback)
+			TableSignal:ConnectToOnClose(Callback)
 		```
 
 		### TypeScript:
@@ -210,7 +210,7 @@ type Signal = {
 
 			const TableSignal = new Signal("TableSignal");
 
-			function callback(currentString: string, ...args: any[]): any | undefined {
+			function Callback(currentString: string, ...args: any[]): any | undefined {
 				if (typeIs(currentString, "string") && currentString === "NewEntry") {
 					for (const arg of args) {
 						Table.push(arg);
@@ -220,7 +220,7 @@ type Signal = {
 				}
 			}
 
-			TableSignal.ConnectToOnClose(callback);
+			TableSignal.ConnectToOnClose(Callback);
 		```
 	 */
 	ConnectToOnClose(Callback: Callback): (Callback: Callback) => Signal.Connection;
@@ -263,7 +263,7 @@ type Signal = {
 
 		@method Fire
 
-		@param ...: any? -- The specified arguments to fire with.
+		@param ...args defined[] -- The specified arguments to fire with.
 
 		Fire the current signal's connections.
 
@@ -288,7 +288,9 @@ type Signal = {
 
 		@method FireUntil
 
-		@param ...: any? -- The specified arguments to fire with.
+		@param Callback Callback -- The callback to hook to.
+
+		@param ...args defined[] -- The specified arguments to fire with.
 
 		Fire the current signal's connections until the specified callback is reached.
 
@@ -310,7 +312,7 @@ type Signal = {
 		```ts
 			// Functions
 			// Placeholder code.
-			function callback() {
+			function Callback() {
 				while (true) {
 					if (Table.includes(7)) {
 						break;
@@ -320,7 +322,7 @@ type Signal = {
 				}
 			}
 
-			TableSignal.FireUntil(callback, "NewEntry", 1);
+			TableSignal.FireUntil(Callback, "NewEntry", 1);
 		```
 	 */
 	FireUntil(Callback: Callback, ...args: Array<defined>): void;
@@ -330,7 +332,7 @@ type Signal = {
 
 		@method OnInvoke
 
-		@param callback -- The specified callback function.
+		@param Callback Callback -- The specified callback function.
 
 		Create a callback function that'd be activated on invoke, retrieving the function's callback.
 
@@ -338,27 +340,27 @@ type Signal = {
 		```lua
 			--// Functions
 			--// Placeholder code.
-			local function callback(currentString: string): number
+			local function Callback(currentString: string): number
 				if (((type(currentString)) == ("string")) and ((currentString) == ("RetrieveTotalCount"))) then
 					return (Table[table.getn(Table)]) :: table
 				end
 			end
 
-			TableSignal:OnInvoke(callback)
+			TableSignal:OnInvoke(Callback)
 		```
 
 		### TypeScript:
 		```ts
 			// Functions
 			// Placeholder code.
-			function callback(currentString: string, ...args: any[]): number | undefined {
+			function Callback(currentString: string, ...args: any[]): number | undefined {
 				if (typeIs(currentString, "string") && currentString === "RetrieveTotalCount") {
 					const lastElement = Table[Table.size() - 1];
 					return lastElement
 				}
 			}
 
-			TableSignal.OnInvoke(callback);
+			TableSignal.OnInvoke(Callback);
 		```
 	 */
 	OnInvoke(Callback: Callback): void;
@@ -368,9 +370,9 @@ type Signal = {
 
 		@method Invoke
 
-		@param ...any -- The specified arguments to invoke with.
+		@param ...args defined[] -- The specified arguments to invoke with.
 
-		@return Callback -- Return the callback associated with "OnInvoke."
+		@return Callback Callback -- Return the callback associated with "OnInvoke."
 
 		Wait until the "OnInvoke" method exists and then invoke with the necessary arguments.
 
@@ -420,9 +422,11 @@ interface SignalConstructor {
 	/**
 		@within Signal
 
-		@param Object -- The object to cleanse.
+		@param signalName string? -- The signal name to instantiate with.
 
-		@return table -- Return the cleanser class's metatable.
+		@param listener string? -- The listener object (callback).
+
+		@return table -- Return the newly instantiated Signal object.
 
 		Index a new Signal object.
 
@@ -465,7 +469,7 @@ interface SignalConstructor {
 
 		@function Is
 
-		@param Object -- The signal object.
+		@param Object Signal -- The signal object.
 
 		@return boolean -- Return whether or not the item's a valid Signal.
 
